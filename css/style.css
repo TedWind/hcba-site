@@ -1,0 +1,275 @@
+/* Heartland Covered Bridge Association — site styles */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #3a3128;
+  background: #f7f3ea;
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+a { color: #7d3b2c; }
+a:hover { color: #a04f3a; }
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top strip */
+.topstrip {
+  background: #4a3527;
+  color: #e8ddcb;
+  font-size: 13px;
+  padding: 5px 0;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.topstrip .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+.topstrip a { color: #e8ddcb; text-decoration: none; }
+.topstrip a:hover { text-decoration: underline; }
+
+/* Header */
+header.site {
+  background: #fdfbf5;
+  border-bottom: 4px solid #8b3a2f;
+  padding: 22px 0 18px;
+}
+.masthead { display: flex; align-items: center; gap: 18px; }
+.masthead svg { flex-shrink: 0; }
+.masthead h1 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #6b2f23;
+  letter-spacing: 0.5px;
+}
+.masthead .tagline {
+  font-style: italic;
+  color: #8a7a63;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+/* Nav */
+nav.main {
+  background: #8b3a2f;
+  font-family: Verdana, Geneva, sans-serif;
+}
+nav.main ul { list-style: none; display: flex; flex-wrap: wrap; }
+nav.main a {
+  display: block;
+  padding: 11px 18px;
+  color: #fbf3e4;
+  text-decoration: none;
+  font-size: 13.5px;
+  letter-spacing: 0.4px;
+}
+nav.main a:hover, nav.main a.here {
+  background: #6b2c23;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(58, 40, 28, 0.55), rgba(58, 40, 28, 0.55)), #a08863;
+  position: relative;
+  overflow: hidden;
+}
+.hero .art { display: block; width: 100%; height: auto; max-height: 420px; object-fit: cover; }
+.hero .credit {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 10.5px;
+  color: rgba(253, 248, 236, 0.85);
+  font-family: Verdana, sans-serif;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+.bridgecard img.bphoto {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ddd0b8;
+  margin-bottom: 4px;
+}
+.photocredit {
+  font-size: 11px;
+  color: #a89a82;
+  font-family: Verdana, sans-serif;
+  margin: 0 0 8px;
+}
+.hero .overlay {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 26px 0;
+  background: linear-gradient(transparent, rgba(40, 26, 16, 0.82));
+  color: #fdf8ec;
+}
+.hero .overlay h2 {
+  font-weight: normal;
+  font-size: 28px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.hero .overlay p { font-style: italic; font-size: 16px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+
+/* Layout */
+.content { padding: 34px 0 44px; }
+.cols { display: flex; gap: 34px; align-items: flex-start; }
+.cols .mainer { flex: 1 1 auto; min-width: 0; }
+.cols aside {
+  flex: 0 0 265px;
+  background: #fdfbf5;
+  border: 1px solid #ddd0b8;
+  padding: 18px;
+  font-size: 15px;
+}
+aside h3 {
+  font-size: 16px;
+  color: #6b2f23;
+  border-bottom: 2px solid #d9c6a3;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+aside ul { list-style: none; }
+aside li { padding: 5px 0; border-bottom: 1px dotted #ddd0b8; }
+aside li:last-child { border-bottom: none; }
+aside .date { display: block; font-size: 12.5px; color: #8a7a63; font-family: Verdana, sans-serif; }
+
+h2.pagetitle {
+  font-weight: normal;
+  color: #6b2f23;
+  font-size: 27px;
+  border-bottom: 3px double #c9b48c;
+  padding-bottom: 8px;
+  margin-bottom: 18px;
+}
+.mainer h3 { color: #6b2f23; font-weight: normal; font-size: 21px; margin: 24px 0 8px; }
+.mainer p { margin-bottom: 14px; }
+.mainer ul, .mainer ol { margin: 0 0 14px 26px; }
+.mainer li { margin-bottom: 5px; }
+
+/* Boxes and tables */
+.notice {
+  background: #f4e9cf;
+  border: 1px solid #d9c6a3;
+  padding: 14px 16px;
+  margin: 0 0 20px;
+  font-size: 15.5px;
+}
+.notice strong { color: #6b2f23; }
+
+table.plain {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 18px;
+  font-size: 15.5px;
+}
+table.plain th, table.plain td {
+  border: 1px solid #d5c6a8;
+  padding: 8px 12px;
+  text-align: left;
+}
+table.plain th { background: #ede1c6; color: #57422e; font-family: Verdana, sans-serif; font-size: 13px; }
+table.plain tr:nth-child(even) td { background: #faf6ec; }
+
+.person {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 22px;
+  background: #fdfbf5;
+  border: 1px solid #e2d6bd;
+  padding: 14px;
+}
+.person .avatar {
+  flex: 0 0 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #c9b48c;
+  color: #fdfbf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-family: Verdana, sans-serif;
+}
+.person h4 { color: #6b2f23; font-size: 17px; }
+.person .role { font-style: italic; color: #8a7a63; font-size: 14.5px; margin-bottom: 5px; }
+.person p { font-size: 15px; margin: 0; }
+
+.bridgecard {
+  border: 1px solid #ddd0b8;
+  background: #fdfbf5;
+  margin-bottom: 18px;
+  padding: 16px;
+}
+.bridgecard h4 { color: #6b2f23; font-size: 17.5px; }
+.bridgecard .meta { font-family: Verdana, sans-serif; font-size: 12.5px; color: #8a7a63; margin: 3px 0 8px; }
+.bridgecard p { font-size: 15px; margin: 0; }
+
+.btn {
+  display: inline-block;
+  background: #8b3a2f;
+  color: #fdf8ec !important;
+  text-decoration: none;
+  padding: 9px 20px;
+  font-family: Verdana, sans-serif;
+  font-size: 13.5px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover { background: #6b2c23; }
+
+/* Homepage feature row */
+.featrow { display: flex; gap: 20px; margin: 26px 0 8px; flex-wrap: wrap; }
+.feat {
+  flex: 1 1 200px;
+  background: #fdfbf5;
+  border: 1px solid #ddd0b8;
+  border-top: 4px solid #8b3a2f;
+  padding: 16px;
+}
+.feat h3 { margin: 0 0 6px !important; font-size: 18px !important; }
+.feat p { font-size: 14.5px; margin-bottom: 8px; }
+.feat a { font-size: 14px; }
+
+/* Forms */
+form.contact label {
+  display: block;
+  font-family: Verdana, sans-serif;
+  font-size: 13px;
+  color: #57422e;
+  margin: 14px 0 4px;
+}
+form.contact input[type="text"], form.contact input[type="email"], form.contact select, form.contact textarea {
+  width: 100%;
+  max-width: 440px;
+  padding: 8px;
+  border: 1px solid #c9b48c;
+  background: #fff;
+  font-family: Georgia, serif;
+  font-size: 15px;
+}
+form.contact textarea { height: 130px; }
+form.contact .btn { margin-top: 16px; }
+
+/* Footer */
+footer.site {
+  background: #4a3527;
+  color: #cbbda5;
+  padding: 26px 0 30px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+footer.site .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+footer.site h4 { color: #ede1c6; font-weight: normal; margin-bottom: 6px; font-size: 15px; }
+footer.site a { color: #e0d2b4; }
+footer.site .fine { width: 100%; border-top: 1px solid #6a543f; margin-top: 16px; padding-top: 12px; font-size: 12.5px; color: #a4917a; font-family: Verdana, sans-serif; }
+
+@media (max-width: 760px) {
+  .cols { flex-direction: column; }
+  .cols aside { flex: 1 1 auto; width: 100%; }
+  .masthead h1 { font-size: 23px; }
+  .hero .overlay h2 { font-size: 21px; }
+}
